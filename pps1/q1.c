@@ -1,23 +1,47 @@
 #include<stdio.h>
+#include<stdlib.h>
+
+void withdrawl(int *balance){
+    int amount;
+    scanf("%d",&amount);
+    if(*balance >= amount){
+        *balance -= amount;
+        printf("%d\n",amount);
+        printf("%d\n",*balance);
+    }
+    else{
+        printf("Invalid amount request, check balance.\n");
+    }
+}
+void deposit(int *balance){
+    int amount;
+    scanf("%d",&amount);
+    printf("%d\n",amount);
+    *balance += amount;
+    printf("%d\n", *balance);
+}
+void display(int balance){
+    printf("%d\n",balance);
+}
 
 int main(){
-    int condn = 1;
-    int n,sump=0,sumn=0;
-    printf("Enter -1 to exit...\n");
-    while(condn== 1){
-        printf("Enter the number: ");
-        scanf("%d",&n);
-        if(n==-1){
-            condn = 0;
-        }
-        else if(n>0){
-            sump+=n;
-        }
-        else{
-            sumn+=n;
-        }
+    int option;
+    scanf("%d",&option);
+    int balance = 30000;
+    switch (option)
+    {
+    case 1:
+        withdrawl(&balance);
+        break;
+    case 2:
+        deposit(&balance);
+        break;
+    case 3:
+        display(balance);
+        break;
+    case 4:
+        exit(0);
+        break;
     }
-    printf("The average of negative number is :%d",sumn);
-    printf("The average of positive number is :%d",sump);
     return 0;
 }
