@@ -8,6 +8,10 @@ class student{
     string name;
     void insert(int id, string name);
     void display();
+    // student(){
+    //     cout << "Student created"<<endl;
+    // }
+    student();
 };
 
 // void student :: insert(int i, string a){
@@ -21,6 +25,10 @@ void student :: insert(int id, string name){
 
 void student :: display(){
     cout << id << "\t" << name << endl;
+}
+
+student :: student(){
+    cout<< "Student created"<< endl;
 }
 
 int main(){

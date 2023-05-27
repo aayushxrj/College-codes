@@ -21,6 +21,5 @@ int main(){
     else{
         printf("Not a Neon Number");
     }
-    
     return 0;
 }

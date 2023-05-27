@@ -2,8 +2,9 @@
 #include<stdlib.h>
 #include<string.h>
 
-int main(){
+int main(){              
     char arr[9];
+    printf("Enter the Date Of Birth : ");
     scanf("%s",arr);
     if(strlen(arr)!=8){
         printf("Invalid Input");
@@ -21,10 +22,10 @@ int main(){
         }
         int result = sumO*3 + sumE;
         if(result%10 == 0){
-            printf("Lucky Number");
+            printf("You have entered %s, is \"Lucky Number\"",arr);
         }
         else{
-            printf("Not a Lucky Number");
+            printf("You have entered %s, is \"Not a Lucky Number\"",arr);
         }
     }
     return 0;
