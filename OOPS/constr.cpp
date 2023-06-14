@@ -14,6 +14,9 @@ class Employee{
     void display(){
         cout << name <<" - "<<salary<<endl;
     }
+    ~Employee(){
+        cout << "Destructor called for " << name << endl;
+    }
 };
 
 int main(){
